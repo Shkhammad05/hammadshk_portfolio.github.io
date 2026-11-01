@@ -2,11 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 body {
-  background-color: #0b1120;
+  background-color: #070d18;
   color: #f1f5f9;
   line-height: 1.6;
   scroll-behavior: smooth;
@@ -18,16 +18,16 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 8%;
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(10px);
+  background: rgba(11, 19, 35, 0.85);
+  backdrop-filter: blur(12px);
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 .logo {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 800;
   letter-spacing: 1px;
 }
@@ -47,7 +47,8 @@ body {
   color: #94a3b8;
   text-decoration: none;
   font-size: 0.95rem;
-  transition: color 0.3s ease;
+  font-weight: 500;
+  transition: color 0.25s ease;
 }
 
 .nav-links a:hover {
@@ -60,11 +61,16 @@ body {
   color: #ffffff !important;
   border-radius: 6px;
   font-weight: 600;
+  transition: background 0.25s ease;
+}
+
+.btn-contact:hover {
+  background: #0369a1;
 }
 
 /* Hero Section */
 .hero-section {
-  padding: 4rem 8% 5rem;
+  padding: 5rem 8% 6rem;
   min-height: 85vh;
   display: flex;
   align-items: center;
@@ -83,21 +89,31 @@ body {
 }
 
 .badge {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   padding: 6px 14px;
-  background: rgba(56, 189, 248, 0.1);
+  background: rgba(56, 189, 248, 0.08);
   color: #38bdf8;
   border: 1px solid rgba(56, 189, 248, 0.3);
-  border-radius: 20px;
+  border-radius: 30px;
   font-size: 0.85rem;
   font-weight: 600;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #38bdf8;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #38bdf8;
 }
 
 .hero-text h1 {
-  font-size: 3rem;
+  font-size: 3.2rem;
   font-weight: 800;
-  line-height: 1.2;
+  line-height: 1.15;
   margin-bottom: 0.5rem;
 }
 
@@ -108,17 +124,17 @@ body {
 }
 
 .role-title {
-  font-size: 1.4rem;
+  font-size: 1.45rem;
   color: #94a3b8;
   font-weight: 500;
   margin-bottom: 1.2rem;
 }
 
-.bio {
+.tagline {
   color: #cbd5e1;
   font-size: 1.05rem;
-  max-width: 580px;
-  margin-bottom: 1.8rem;
+  max-width: 600px;
+  margin-bottom: 2rem;
 }
 
 /* Contact Badges */
@@ -126,25 +142,25 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.2rem;
 }
 
 .c-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #1e293b;
+  background: #111e36;
   color: #e2e8f0;
   padding: 8px 14px;
   border-radius: 8px;
   font-size: 0.88rem;
   text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  transition: all 0.2s ease;
 }
 
 .c-badge:hover {
-  background: #273549;
+  background: #1a2c4e;
   border-color: #38bdf8;
 }
 
@@ -168,35 +184,37 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  transition: 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 .btn-primary:hover {
   background: #0369a1;
+  transform: translateY(-2px);
 }
 
 .btn-outline {
-  padding: 12px 20px;
+  padding: 12px 22px;
   background: transparent;
   color: #cbd5e1;
-  border: 1px solid #334155;
+  border: 1px solid #273852;
   border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  transition: 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 .btn-outline:hover {
   border-color: #38bdf8;
   color: #38bdf8;
+  transform: translateY(-2px);
 }
 
-/* Image Card & Glow */
+/* Square Image Card with Modern Border */
 .hero-image-wrapper {
-  flex: 0.8;
+  flex: 0.85;
   display: flex;
   justify-content: center;
   position: relative;
@@ -204,9 +222,9 @@ body {
 
 .image-glow {
   position: absolute;
-  width: 260px;
-  height: 260px;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.35) 0%, rgba(0, 0, 0, 0) 70%);
+  width: 290px;
+  height: 290px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.25) 0%, rgba(0, 0, 0, 0) 70%);
   filter: blur(40px);
   z-index: 1;
 }
@@ -214,23 +232,23 @@ body {
 .image-card {
   position: relative;
   z-index: 2;
-  width: 270px;
-  height: 270px;
-  border-radius: 50%;
-  padding: 8px;
-  background: linear-gradient(135deg, #38bdf8, #6366f1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  width: 280px;
+  height: 280px;
+  border-radius: 18px; /* Clean square with smooth edges */
+  padding: 6px;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.8), rgba(99, 102, 241, 0.4));
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
 }
 
 .image-card img {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
+  border-radius: 14px; /* Square inside */
   object-fit: cover;
-  background: #0f172a;
+  background: #0b1324;
 }
 
-/* Section Shared */
+/* Sections Shared */
 .section {
   padding: 5rem 8%;
 }
@@ -249,24 +267,84 @@ body {
 }
 
 .section-title h2 {
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   font-weight: 800;
-  margin-top: 0.3rem;
+  margin-top: 0.4rem;
 }
 
-/* Skills Cards */
+/* About Grid */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.about-card {
+  background: #0f192d;
+  padding: 2.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.about-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+  color: #38bdf8;
+}
+
+.about-card p {
+  color: #94a3b8;
+  margin-bottom: 1rem;
+  font-size: 0.98rem;
+}
+
+.about-stats-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.stat-box {
+  background: #0f192d;
+  padding: 1.8rem 1.4rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+  border-color: #38bdf8;
+  transform: translateY(-4px);
+}
+
+.stat-number {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #38bdf8;
+  margin-bottom: 0.4rem;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  line-height: 1.3;
+}
+
+/* Skills Cards & Tags */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
 }
 
 .skill-card {
-  background: #111c33;
+  background: #0f192d;
   padding: 2rem;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.3s ease;
 }
 
 .skill-card:hover {
@@ -277,46 +355,56 @@ body {
 .skill-icon {
   font-size: 1.8rem;
   color: #38bdf8;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .skill-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.8rem;
+  font-size: 1.25rem;
+  margin-bottom: 1.2rem;
 }
 
-.skill-card p {
-  color: #94a3b8;
-  font-size: 0.95rem;
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tags span {
+  background: #192742;
+  color: #cbd5e1;
+  padding: 5px 11px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  border: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 /* Projects Cards */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   gap: 2rem;
 }
 
 .project-card {
-  background: #111c33;
-  padding: 2.2rem;
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: 0.3s ease;
+  background: #0f192d;
+  padding: 2.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.3s ease;
 }
 
 .project-card:hover {
   border-color: #38bdf8;
-  transform: translateY(-4px);
+  transform: translateY(-5px);
 }
 
-.project-tag {
+.project-badge {
   display: inline-block;
   background: rgba(56, 189, 248, 0.1);
   color: #38bdf8;
-  padding: 4px 10px;
+  padding: 4px 12px;
   border-radius: 4px;
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
@@ -324,7 +412,6 @@ body {
 .project-card h3 {
   font-size: 1.35rem;
   margin-bottom: 1rem;
-  color: #f8fafc;
 }
 
 .project-card p {
@@ -340,41 +427,90 @@ body {
 }
 
 .tech-stack-tags span {
-  background: #1e293b;
-  color: #cbd5e1;
-  padding: 4px 10px;
+  background: #192742;
+  color: #38bdf8;
+  padding: 5px 10px;
   border-radius: 6px;
   font-size: 0.8rem;
   font-weight: 500;
 }
 
+/* Certifications Grid */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.cert-card {
+  background: #0f192d;
+  padding: 1.8rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.cert-card:hover {
+  border-color: #38bdf8;
+  transform: translateY(-4px);
+}
+
+.cert-icon {
+  font-size: 2rem;
+  color: #38bdf8;
+  margin-bottom: 1rem;
+}
+
+.cert-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.cert-card p {
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
 /* Footer */
 footer {
   text-align: center;
-  padding: 3rem 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  color: #64748b;
-  font-size: 0.9rem;
+  padding: 4rem 8% 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  background: #050912;
 }
 
-/* Responsive for Mobile */
-@media (max-width: 868px) {
+.footer-content h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-content p {
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+}
+
+.copyright {
+  margin-top: 3rem;
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
   .hero-container {
     flex-direction: column-reverse;
     text-align: center;
-    gap: 2.5rem;
   }
-  .bio {
-    margin: 0 auto 1.5rem;
+  .about-grid {
+    grid-template-columns: 1fr;
   }
-  .contact-badges, .cta-buttons {
+  .tagline, .contact-badges, .cta-buttons {
     justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   .hero-text h1 {
-    font-size: 2.4rem;
-  }
-  .image-card {
-    width: 210px;
-    height: 210px;
+    font-size: 2.5rem;
   }
 }
