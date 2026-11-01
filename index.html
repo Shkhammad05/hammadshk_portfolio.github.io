@@ -5,24 +5,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hammad Shaikh | Cloud & DevOps Engineer</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="logo">HAMMAD.DEV</div>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <section class="hero" id="about">
-    <h1>Hi, I'm <span>Hammad Shaikh</span></h1>
-    <p class="role">Cloud & DevOps Engineer</p>
-    <p class="bio">Passionate about architecting cloud infrastructure, Linux systems, and automated CI/CD pipelines.</p>
-    <a href="#projects" class="btn">View Projects</a>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo"><span>HAMMAD</span>.DEV</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact" class="btn-contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero / About Section -->
+  <section class="hero-section" id="about">
+    <div class="hero-container">
+      <div class="hero-text">
+        <div class="badge">🚀 Open to Cloud & DevOps Roles</div>
+        <h1>Hi, I'm <span class="gradient-text">Hammad Shaikh</span></h1>
+        <h2 class="role-title">Cloud & DevOps Engineer</h2>
+        <p class="bio">
+          Computer Engineering graduate specializing in building scalable Microsoft Azure & AWS infrastructure, automated CI/CD pipelines, containerization, and Linux system operations.
+        </p>
+
+        <!-- Direct Contact Info Badges -->
+        <div class="contact-badges">
+          <a href="mailto:hammadshaihk456@gmail.com" class="c-badge">
+            <i class="fa-solid fa-envelope"></i> hammadshaihk456@gmail.com
+          </a>
+          <a href="tel:+919049949407" class="c-badge">
+            <i class="fa-solid fa-phone"></i> +91 9049949407
+          </a>
+          <span class="c-badge">
+            <i class="fa-solid fa-location-dot"></i> Maharashtra, India
+          </span>
+        </div>
+
+        <div class="cta-buttons">
+          <a href="#projects" class="btn-primary">View Projects <i class="fa-solid fa-arrow-down"></i></a>
+          <a href="https://linkedin.com/in/hammadshaikhengineer" target="_blank" class="btn-outline">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://github.com/Shkhammad05" target="_blank" class="btn-outline">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Profile Photo Container -->
+      <div class="hero-image-wrapper">
+        <div class="image-glow"></div>
+        <div class="image-card">
+          <!-- Apni image ka naam 'profile.jpg' rakh kar same folder me save karein -->
+          <img src="profile.jpg" alt="Hammad Shaikh" onerror="this.src='https://ui-avatars.com/api/?name=Hammad+Shaikh&background=0284c7&color=fff&size=300'" />
+        </div>
+      </div>
+    </div>
   </section>
-</body>
-</html>
+
+  <!-- Skills Section -->
+  <section class="section" id="skills">
+    <div class="section-title">
+      <p class="sub-heading">My Expertise</p>
+      <h2>Technical Skills</h2>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fa-solid fa-cloud"></i></div>
+        <h3>Cloud Platforms</h3>
+        <p>Microsoft Azure (VMs, VNets, NSGs, Entra ID, Azure Monitor, Blob Storage), AWS (EC2, S3, IAM, VPC), OCI</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fa-solid fa-network-wired"></i></div>
+        <h3>Networking & Security</h3>
+        <p>TCP/IP, DNS, DHCP, Subnetting, VNet Peering, NSG Security Rules, Packet Diagnostics (ping, traceroute, ns
